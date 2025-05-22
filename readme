@@ -1,0 +1,15 @@
+# Examen UF4
+
+## Registro
+
+- Endpoint: `POST /register`
+- Campos requeridos: `name`, `email`, `password`, `password_confirmation`, `role` (admin o user)
+- Valida datos y crea usuario con contraseña encriptada
+- Respuesta: mensaje de éxito y datos del usuario
+
+## Login
+
+- Endpoint: `POST /login`
+- Campos requeridos: `email`, `password`
+- Respuesta: token JWT si las credenciales son válidas
+- Usa el token en el header `Authorization: Bearer <token>` para acceder a rutas protegidas
