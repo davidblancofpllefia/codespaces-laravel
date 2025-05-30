@@ -86,7 +86,7 @@ class AuthController extends Controller
             ], 200);
         }catch (JWTException $e){
             return response()->json ([
-                'message' => 'No se pudo Logear'
+                'message' => 'Error'
             ],500);
         }
     }
@@ -100,10 +100,11 @@ public function getUser()
     $user = JWTAuth::parseToken()->authenticate();
 
     return response()->json([
-        'message' => 'User conseguido caramba',
+        'message' => 'Usuario autenticado correctamente.',
         'data' => $user,
     ], 200);
 }
+
 
     public function all()
     {
